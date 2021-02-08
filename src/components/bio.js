@@ -8,7 +8,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
@@ -28,7 +27,9 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            linkedIn
+            gmail
+            github
           }
         }
       }
@@ -59,9 +60,6 @@ const Bio = () => {
       <p>
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
       </p>
     </div>
   )

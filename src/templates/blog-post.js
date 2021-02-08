@@ -22,6 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               marginBottom: 0,
+              color: "#93cfe5",
             }}
           >
             {post.frontmatter.title}
@@ -31,6 +32,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
+              fontFamily: "Tahoma",
+              color: "#b7c3c7"
             }}
           >
             {post.frontmatter.date}
@@ -60,14 +63,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+               &lt; {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} &gt;
               </Link>
             )}
           </li>

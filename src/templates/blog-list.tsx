@@ -1,9 +1,11 @@
 // Gatsby supports TypeScript natively!
+// @ts-ignore
 import React from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import "@kfonts/bm-jua"
 
 type PageContext = {
   currentPage: number
@@ -89,14 +91,14 @@ const BlogIndex = ({
           <li>
             {!isFirst && (
               <Link to={prevPage} rel="prev">
-                ← Previous Page
+                &lt; Previous Page
               </Link>
             )}
           </li>
           <li>
             {!isLast && (
               <Link to={nextPage} rel="next">
-                Next Page →
+                Next Page &gt;
               </Link>
             )}
           </li>
