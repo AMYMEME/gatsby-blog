@@ -65,6 +65,7 @@ const Layout = ({ location, title, children }) => {
           marginBottom: 0,
           marginTop: 0,
           fontFamily: `Montserrat, sans-serif`,
+          fontSize: "xx-large"
         }}
       >
         <Link
@@ -98,7 +99,7 @@ const Layout = ({ location, title, children }) => {
         </div>
       </div>
 
-      <div className="main-content relative">
+      <div className="main-content">
         <main>{children}</main>
         <Footer />
       </div>

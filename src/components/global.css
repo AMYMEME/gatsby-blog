@@ -3,11 +3,12 @@
 body {
   --bg: #fff;
   --lightBg: #f5f5f5;
-  --textNormal: #181818;
+  --textNormal: #393939;
   --textTitle: #181818;
   --textLink: #93cfe5;
   --hr: hsla(0, 20%, 1%, 0.2);
-
+  --inlineCode: #fa7f72;
+  --inlineBackground: #f5f5f5;
   background-color: var(--bg);
 }
 
@@ -16,10 +17,12 @@ body.dark {
 
   --bg: #1e1e1e;
   --lightBg: #0f0f0f;
-  --textNormal: #e0e0e0;
-  --textTitle: #fff;
+  --textNormal: #bbb;
+  --textTitle: #e7e7e7;
   --textLink: #93cfe5;
   --hr: hsla(0, 0%, 100%, 0.2);
+  --inlineCode: #ff9292;
+  --inlineBackground: #313131;
 }
 
 a {
@@ -60,8 +63,8 @@ small {
 
 code {
   font-family: Hack;
-  color: #fa7f72;
-  background: #f5f5f5;
+  color: var(--inlineCode);
+  background: var(--inlineBackground);
   padding: .2em;
   border-radius: .3em;
   white-space: normal;
@@ -69,6 +72,15 @@ code {
 
 .footnotes {
   word-break: break-all;
+}
+
+blockquote {
+  border-left: 7px solid var(--textLink);
+}
+
+blockquote p {
+  font-size: medium;
+  color: var(--hr);
 }
 
 a.social-icon-button {
@@ -80,6 +92,7 @@ a.social-icon-button {
   border-radius: 1em;
   border: 2px solid transparent;
   text-align: center;
+  display: block;
 }
 
 a.social-icon-button:hover {
@@ -92,6 +105,20 @@ a.social-icon-button:focus {
   background-color: #c9cbff;
   border-color: #c9cbff;
   color: var(--bg);
+}
+
+.gatsby-highlight {
+  background-color: #2E3440;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
 }
 
 button {
@@ -122,19 +149,16 @@ button {
 }
 
 .sidebar {
-  height: 200px;
-  width: 100%;
   position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
   text-align: center;
+  width: 100vw;
+  height: 13em;
+  z-index: 1;
+  -webkit-transform: translateZ(1px);
   background-color: var(--lightBg);
 }
 
 .footer {
-  display: block;
   padding-top: 1em;
   padding-bottom: 2em;
   font-family: "Tahoma";
@@ -145,22 +169,34 @@ button {
 .main-content {
   background-color: var(--bg);
   position: absolute;
-  top: 200px;
-  z-index: 10;
-  padding: 0 20px 0;
-  margin-left: 0;
+  top: 14em;
+  z-index: 0;
+  width: 100vw;
+  padding: 2em 2.5em 0;
+  -webkit-transform: translateZ(0px);
 }
 
-@media only screen and (min-width: 768px) {
+.icon-group {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
   .sidebar {
     height: 100vh;
-    width: 380px;
+    position: fixed;
+    width: 350px;
+    z-index: 1;
+    -webkit-transform: translateZ(1px);
   }
   .main-content {
-    padding: 0 100px 0;
-    height: 100vh;
-    width: calc(100% - 380px);
-    margin-left: 380px;
+    position: initial;
+    width: 99vw;
+    padding: 2em 1em 0 400px;
     top: 0;
+    z-index: 0;
+    -webkit-transform: translateZ(0px);
+  }
+  .icon-group {
+    display: inline-flex;
   }
 }
