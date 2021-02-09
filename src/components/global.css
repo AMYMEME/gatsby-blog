@@ -35,11 +35,6 @@ a.gatsby-resp-image-link:hover {
   box-shadow: 0px 6px 13px 2px rgba(0, 0, 0, 0.25);
 }
 
-code.language-text {
-  font-family: bm-jua;
-  color: #aa96da;
-}
-
 h1,
 h2,
 h3,
@@ -58,8 +53,45 @@ li {
   color: var(--textNormal);
 }
 
+small {
+  font-family: Tahoma;
+  color: #999999;
+}
+
+code {
+  font-family: Hack;
+  color: #fa7f72;
+  background: #f5f5f5;
+  padding: .2em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
 .footnotes {
   word-break: break-all;
+}
+
+a.social-icon-button {
+  font-family: bm-jua;
+  padding: 5px 20px;
+  background-color: var(--textLink);
+  color: var(--bg);
+  margin: 10px;
+  border-radius: 1em;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+a.social-icon-button:hover {
+  background-color: var(--bg);
+  color: var(--textLink);
+  border-color: var(--textLink)
+}
+
+a.social-icon-button:focus {
+  background-color: #c9cbff;
+  border-color: #c9cbff;
+  color: var(--bg);
 }
 
 button {
