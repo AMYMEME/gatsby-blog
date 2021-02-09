@@ -65,7 +65,7 @@ const Bio = () => {
         <p style={{margin: 0}}>
           Written by <strong>{author.name}</strong> {author.summary}
         </p>
-        <div style={{display: `inline-flex`}}>
+        <div className={"icon-group"}>
           <a className={"social-icon-button"} href={`http://github.com/${social.github}`}
              target={"_blank"} rel="noopener noreferrer">
             <FontAwesomeIcon icon={['fab', 'github']} size={'lg'} style={{marginLeft: "0.3em", marginRight: "0.3em"}}/>
