@@ -11,7 +11,7 @@ module.exports = {
     social: {
       twitter: "",
       gmail: "cgc8016@ewhain.net",
-      linkedIn: "",
+      linkedIn: "seulgi-choi-b8623519b",
       github: "AMYMEME",
       kakaoTalk: "ovoamy"
     },
@@ -48,7 +48,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve:`gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: true,
+            }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -85,5 +90,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-fontawesome-css`,
   ],
 }
