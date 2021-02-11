@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
-              fontFamily: "Tahoma",
+              fontFamily: "Roboto Mono",
               color: "#b7c3c7"
             }}
           >
