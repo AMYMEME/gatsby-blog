@@ -8,7 +8,6 @@ import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
@@ -20,6 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <article>
         <header>
           <h1
+            id={"post-title"}
             style={{
               marginBottom: 0,
               color: "#93cfe5",

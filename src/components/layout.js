@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { scale } from "../utils/typography"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Footer from "./footer"
 import "./global.css"
@@ -18,7 +19,7 @@ const Layout = ({ location, title, children }) => {
         return (
           <button
             aria-label="theme-switch"
-            className="leading-none p-1"
+            className="dark-mode-button leading-none p-1"
             onClick={() => toggleTheme(isDarkMode ? "light" : "dark")}
           >
             {isDarkMode ? (
@@ -103,6 +104,11 @@ const Layout = ({ location, title, children }) => {
         <main>{children}</main>
         <Footer />
       </div>
+
+          {location.pathname !== "/" ?
+            <button className="top-scroll-button" onClick={() => scrollTo('#post-title')}>
+              TOP
+            </button>:<></>}
     </div>
   )
 }

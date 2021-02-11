@@ -93,6 +93,7 @@ a.social-icon-button {
   border: 2px solid transparent;
   text-align: center;
   display: block;
+  outline: none;
 }
 
 a.social-icon-button:hover {
@@ -101,7 +102,7 @@ a.social-icon-button:hover {
   border-color: var(--textLink)
 }
 
-a.social-icon-button:focus {
+a.social-icon-button:active {
   background-color: #c9cbff;
   border-color: #c9cbff;
   color: var(--bg);
@@ -121,7 +122,7 @@ a.social-icon-button:focus {
   overflow: initial;
 }
 
-button {
+.dark-mode-button {
   border: none;
   margin: 0;
   padding: 0;
@@ -148,6 +149,38 @@ button {
   outline: 0;
 }
 
+.top-scroll-button {
+  position: fixed;
+  font-family: bm-jua;
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: var(--textLink);
+  color: var(--bg);
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 0.5em;
+  border: 2px solid transparent;
+  text-align: center;
+  display: block;
+  right: 2em;
+  bottom: 2em;
+  z-index: 20;
+  -webkit-transform: translateZ(20px);
+  outline: none;
+}
+
+.top-scroll-button:hover {
+  background-color: var(--bg);
+  color: var(--textLink);
+  border-color: var(--textLink)
+}
+
+.top-scroll-button:active {
+  background-color: #c9cbff;
+  border-color: #c9cbff;
+  color: var(--bg);
+}
+
 .sidebar {
   position: fixed;
   text-align: center;
@@ -170,10 +203,10 @@ button {
   background-color: var(--bg);
   position: absolute;
   top: 14em;
-  z-index: 0;
+  z-index: 10;
   width: 100vw;
   padding: 2em 2.5em 0;
-  -webkit-transform: translateZ(0px);
+  -webkit-transform: translateZ(10px);
 }
 
 .icon-group {
